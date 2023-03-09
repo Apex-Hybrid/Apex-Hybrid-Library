@@ -115,7 +115,8 @@ public class LibraryAppTest {
      */
     @Test
     public void getAllBooksTest(){
-        List<Book> books = bookDAO.getAllBooks();
+         bookDAO.getAllBooks();
+        return ;
     }
 
     /**

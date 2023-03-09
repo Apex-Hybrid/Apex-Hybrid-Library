@@ -3,6 +3,8 @@ package Application.Service;
 import Application.Model.Author;
 import Application.DAO.AuthorDAO;
 
+import static org.mockito.ArgumentMatchers.contains;
+
 import java.util.List;
 
 /**
@@ -40,7 +42,8 @@ public class AuthorService {
      * @return all authors
      */
     public List<Author> getAllAuthors() {
-        return null;
+        List<Author> author = authorDAO.getAllAuthors();
+        return author;
     }
     /**
      * TODO: Use the AuthorDAO to persist an author. The given Author will not have an id provided.
@@ -49,6 +52,8 @@ public class AuthorService {
      * @return The persisted author if the persistence is successful.
      */
     public Author addAuthor(Author author) {
-        return null;
+        
+        Author newAuthor = authorDAO.insertAuthor(author);
+        return newAuthor;
     }
 }
